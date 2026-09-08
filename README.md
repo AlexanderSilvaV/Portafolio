@@ -2,7 +2,7 @@
 
 ### Full Stack Software Developer | AI Enthusiast | Computer Vision & Machine Learning
 
-Bienvenida a mi portfolio profesional.
+Bienvenid(o)a a mi portfolio profesional.
 
 Este sitio reúne algunos de los proyectos, tecnologías y experiencias que han formado parte de mi trayectoria como desarrolladora de software, con especial interés en aplicaciones web modernas, inteligencia artificial y soluciones tecnológicas orientadas a resolver problemas reales.
 
