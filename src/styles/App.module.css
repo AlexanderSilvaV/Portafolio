@@ -1,0 +1,28 @@
+.fondo {
+    background-color: yellow;
+    text-align: center;
+
+    /* Para que justify-content funcione */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.textocolor {
+    color: rgb(2, 2, 2);
+
+    /* "justify" no es válido para align-items */
+    text-align: justify;
+}
+
+.titulo {
+    color: red;
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+}
+
+.centro {
+    display: flex;           /* necesario para usar align-items y justify-content */
+    justify-content: center;
+    align-items: center;
+}

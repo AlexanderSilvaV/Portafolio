@@ -1,0 +1,590 @@
+.certifications {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 7rem 0;
+
+    background: #070708;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.certificationsBackground {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.backgroundGrid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 15%,
+            black 80%,
+            transparent
+        );
+
+    opacity: 0.45;
+}
+
+.backgroundGlow {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    top: -300px;
+    left: -250px;
+
+    border-radius: 50%;
+
+    background: rgba(192, 38, 211, 0.13);
+
+    filter: blur(120px);
+
+    animation: floatGlow 9s ease-in-out infinite;
+}
+
+.backgroundGlowSecondary {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -250px;
+    bottom: -250px;
+
+    border-radius: 50%;
+
+    background: rgba(124, 58, 237, 0.12);
+
+    filter: blur(110px);
+
+    animation: floatGlowSecondary 11s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(70px, 45px);
+    }
+}
+
+@keyframes floatGlowSecondary {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-60px, -45px);
+    }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.certificationsContainer {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 0 3rem;
+
+    box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.certificationsHeader {
+    max-width: 760px;
+
+    margin: 0 auto 5rem;
+
+    text-align: center;
+
+    animation: headerAppear 0.8s ease both;
+}
+
+@keyframes headerAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.certificationsEyebrow {
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    color: #c084fc;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 15px rgba(192, 132, 252, 0.35);
+}
+
+.certificationsTitle {
+    margin: 0;
+
+    font-size: clamp(2.8rem, 6vw, 5rem);
+
+    font-weight: 800;
+    line-height: 1;
+
+    letter-spacing: -0.06em;
+}
+
+.certificationsTitle span {
+    color: #d946ef;
+
+    text-shadow:
+        0 0 20px rgba(217, 70, 239, 0.35),
+        0 0 50px rgba(217, 70, 239, 0.12);
+}
+
+.certificationsIntro {
+    max-width: 650px;
+
+    margin: 1.8rem auto 0;
+
+    color: #8f8f98;
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.certificationsGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 2rem;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.certificationCard {
+    position: relative;
+
+    min-height: 360px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.012)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(18px);
+
+    overflow: hidden;
+
+    animation: cardAppear 0.8s ease both;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.certificationCard:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.certificationCard:hover {
+    transform: translateY(-10px);
+
+    border-color:
+        rgba(217, 70, 239, 0.4);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(217, 70, 239, 0.12);
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   CARD GLOW
+========================= */
+
+.cardGlow {
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    top: -140px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(217, 70, 239, 0.14);
+
+    filter: blur(65px);
+
+    opacity: 0.55;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.certificationCard:hover .cardGlow {
+    opacity: 1;
+
+    transform: scale(1.35);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.certificationContent {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+
+    padding: 2rem;
+
+    box-sizing: border-box;
+}
+
+/* =========================
+   TOP
+========================= */
+
+.certificationTop {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1.8rem;
+}
+
+.certificationNumber {
+    color: rgba(217, 70, 239, 0.5);
+
+    font-family: 'Courier New', monospace;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+.certificationYear {
+    color: #71717a;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.certificationIcon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 1rem;
+
+    border-radius: 12px;
+
+    color: #f0abfc;
+
+    background:
+        rgba(217, 70, 239, 0.08);
+
+    border:
+        1px solid rgba(217, 70, 239, 0.25);
+
+    font-size: 1.2rem;
+    font-weight: 800;
+
+    box-shadow:
+        0 0 20px rgba(217, 70, 239, 0.1);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.certificationCard:hover .certificationIcon {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 25px rgba(217, 70, 239, 0.25);
+}
+
+/* =========================
+   TYPE
+========================= */
+
+.certificationType {
+    display: inline-block;
+
+    margin-bottom: 0.7rem;
+
+    color: #c084fc;
+
+    font-size: 0.62rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.certificationCard h3 {
+    margin: 0;
+
+    max-width: 500px;
+
+    color: #ffffff;
+
+    font-size: 1.3rem;
+    font-weight: 750;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.025em;
+
+    transition: color 0.3s ease;
+}
+
+.certificationCard:hover h3 {
+    color: #f0abfc;
+}
+
+.certificationOrganization {
+    margin: 0.7rem 0 0;
+
+    color: #a1a1aa;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.certificationDescription {
+    margin: 1rem 0 0;
+
+    color: #777780;
+
+    font-size: 0.78rem;
+
+    line-height: 1.75;
+}
+
+/* =========================
+   LINK
+========================= */
+
+.certificationLink {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    margin-top: 1.5rem;
+
+    color: #d946ef;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        gap 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+.certificationLink span {
+    font-size: 0.9rem;
+}
+
+.certificationLink:hover {
+    gap: 0.8rem;
+
+    color: #f0abfc;
+
+    text-shadow:
+        0 0 12px rgba(217, 70, 239, 0.5);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+    .certifications {
+        padding: 5rem 0;
+    }
+
+    .certificationsContainer {
+        padding: 0 2rem;
+    }
+
+    .certificationsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificationCard {
+        min-height: auto;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+    .certifications {
+        padding: 4rem 0;
+    }
+
+    .certificationsContainer {
+        padding: 0 1rem;
+    }
+
+    .certificationsHeader {
+        margin-bottom: 3rem;
+    }
+
+    .certificationsEyebrow {
+        font-size: 0.65rem;
+    }
+
+    .certificationsTitle {
+        font-size: clamp(2.4rem, 12vw, 3.5rem);
+    }
+
+    .certificationsIntro {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .certificationsGrid {
+        gap: 1.25rem;
+    }
+
+    .certificationCard {
+        border-radius: 14px;
+    }
+
+    .certificationContent {
+        padding: 1.4rem;
+    }
+
+    .certificationCard h3 {
+        font-size: 1.05rem;
+    }
+
+    .certificationDescription {
+        font-size: 0.73rem;
+    }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .backgroundGlow,
+    .backgroundGlowSecondary,
+    .certificationsHeader,
+    .certificationCard {
+        animation: none;
+    }
+
+    .certificationCard,
+    .certificationIcon {
+        transition: none;
+    }
+}

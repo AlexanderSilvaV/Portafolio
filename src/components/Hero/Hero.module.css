@@ -1,0 +1,1178 @@
+.hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    background: #070708;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.heroBackground {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+.heroGrid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 85%
+    );
+}
+
+
+/* =========================================
+   ORB PRINCIPAL
+========================================= */
+
+.heroOrb {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    top: -250px;
+    left: -150px;
+
+    border-radius: 50%;
+
+    background: rgba(192, 38, 211, 0.16);
+
+    filter: blur(100px);
+
+    animation:
+        floatOrb 8s ease-in-out infinite;
+}
+
+
+.heroOrbSecondary {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -200px;
+    bottom: -250px;
+
+    border-radius: 50%;
+
+    background: rgba(124, 58, 237, 0.14);
+
+    filter: blur(110px);
+
+    animation:
+        floatOrbSecondary 10s ease-in-out infinite;
+}
+
+
+/* =========================================
+   ORB ANIMATIONS
+========================================= */
+
+@keyframes floatOrb {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(60px, 40px);
+    }
+}
+
+
+@keyframes floatOrbSecondary {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-50px, -40px);
+    }
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.heroContainer {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 6rem 4rem;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(400px, 0.9fr);
+
+    align-items: center;
+
+    gap: 5rem;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.heroContent {
+    animation:
+        heroAppear 0.9s ease both;
+}
+
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.heroEyebrow {
+    display: inline-block;
+
+    margin-bottom: 1.5rem;
+
+    color: #a1a1aa;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.heroTitle {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    font-weight: 800;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.06em;
+}
+
+
+.heroTitle span {
+    color: #d946ef;
+
+    text-shadow:
+        0 0 25px rgba(217, 70, 239, 0.3);
+}
+
+
+/* =========================================
+   ROLE
+========================================= */
+
+.heroRole {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+
+    margin-top: 1.5rem;
+
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+
+    font-weight: 700;
+}
+
+
+.heroRolePrefix {
+    color: #ffffff;
+}
+
+
+.heroRoleAnimated {
+    display: flex;
+
+    align-items: center;
+
+    min-width: 220px;
+
+    color: #c084fc;
+
+    text-shadow:
+        0 0 18px rgba(192, 132, 252, 0.25);
+}
+
+
+/* =========================================
+   TYPEWRITER CURSOR
+========================================= */
+
+.heroCursor {
+    width: 3px;
+    height: 1em;
+
+    margin-left: 0.2rem;
+
+    background: #d946ef;
+
+    box-shadow:
+        0 0 10px rgba(217, 70, 239, 0.8);
+
+    animation:
+        cursorBlink 0.8s infinite;
+}
+
+
+@keyframes cursorBlink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.heroDescription {
+    max-width: 680px;
+
+    margin: 2rem 0 0;
+
+    color: #8f8f98;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.heroActions {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+
+.heroButton {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.45rem;
+
+    min-height: 48px;
+
+    padding: 0 1.5rem;
+
+    border-radius: 8px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.heroButton:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.heroButtonPrimary {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c026d3,
+            #9333ea
+        );
+
+    border: 1px solid transparent;
+
+    box-shadow:
+        0 0 25px rgba(192, 38, 211, 0.2);
+}
+
+
+.heroButtonPrimary:hover {
+    box-shadow:
+        0 0 35px rgba(192, 38, 211, 0.4),
+        0 0 60px rgba(147, 51, 234, 0.15);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.heroButtonSecondary {
+    color: #d4d4d8;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border:
+        1px solid #27272a;
+}
+
+
+.heroButtonSecondary:hover {
+    color: #ffffff;
+
+    border-color:
+        rgba(217, 70, 239, 0.5);
+
+    background:
+        rgba(217, 70, 239, 0.05);
+
+    box-shadow:
+        0 0 20px rgba(217, 70, 239, 0.08);
+}
+
+
+/* =========================================
+   CV BUTTON
+========================================= */
+
+.heroButtonCV {
+    color: #ffffff;
+
+    background:
+        rgba(168, 85, 247, 0.06);
+
+    border:
+        1px solid rgba(190, 80, 255, 0.45);
+
+    box-shadow:
+        0 0 0 rgba(168, 85, 247, 0);
+}
+
+
+/* Brillo que atraviesa el botón */
+
+.heroButtonCV::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.12),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition:
+        left 0.6s ease;
+}
+
+
+.heroButtonCV:hover::before {
+    left: 140%;
+}
+
+
+.heroButtonCV:hover {
+    border-color:
+        rgba(225, 110, 255, 0.9);
+
+    background:
+        rgba(168, 85, 247, 0.14);
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.22),
+        0 0 40px rgba(236, 72, 153, 0.08);
+}
+
+
+/* Flecha */
+
+.heroButtonArrow {
+    display: inline-block;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.heroButtonCV:hover .heroButtonArrow {
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+
+.heroTech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem;
+
+    margin-top: 2.5rem;
+}
+
+
+.heroTech span {
+    padding:
+        0.45rem
+        0.8rem;
+
+    color: #71717a;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border:
+        1px solid #1f1f23;
+
+    border-radius: 6px;
+
+    font-size: 0.7rem;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.heroTech span:hover {
+    color: #d946ef;
+
+    border-color:
+        rgba(217, 70, 239, 0.35);
+
+    background:
+        rgba(217, 70, 239, 0.04);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================
+   VISUAL
+========================================= */
+
+.heroVisual {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 450px;
+
+    animation:
+        visualAppear 1s ease 0.2s both;
+}
+
+
+@keyframes visualAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+/* =========================================
+   VISUAL GLOW
+========================================= */
+
+.heroGlow {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(192, 38, 211, 0.15);
+
+    filter: blur(80px);
+
+    animation:
+        glowPulse 4s ease-in-out infinite;
+}
+
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+
+        transform:
+            scale(0.9);
+    }
+
+    50% {
+        opacity: 0.9;
+
+        transform:
+            scale(1.1);
+    }
+}
+
+
+/* =========================================
+   CODE CARD
+========================================= */
+
+.codeCard {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 500px;
+
+    background:
+        rgba(10, 10, 14, 0.85);
+
+    border:
+        1px solid rgba(217, 70, 239, 0.18);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        0 0 50px rgba(192, 38, 211, 0.08);
+
+    backdrop-filter:
+        blur(15px);
+
+    overflow: hidden;
+
+    animation:
+        cardFloat 5s ease-in-out infinite;
+
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.codeCard:hover {
+    border-color:
+        rgba(217, 70, 239, 0.35);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.55),
+        0 0 60px rgba(192, 38, 211, 0.14);
+}
+
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-12px);
+    }
+}
+
+
+/* =========================================
+   CODE HEADER
+========================================= */
+
+.codeHeader {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    height: 42px;
+
+    padding:
+        0 1rem;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    border-bottom:
+        1px solid #1f1f23;
+}
+
+
+.codeHeader span {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #3f3f46;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.codeCard:hover .codeHeader span {
+    transform:
+        scale(1.15);
+}
+
+
+.codeHeader span:first-child {
+    background: #ef4444;
+
+    box-shadow:
+        0 0 8px rgba(239, 68, 68, 0.25);
+}
+
+
+.codeHeader span:nth-child(2) {
+    background: #eab308;
+
+    box-shadow:
+        0 0 8px rgba(234, 179, 8, 0.2);
+}
+
+
+.codeHeader span:nth-child(3) {
+    background: #22c55e;
+
+    box-shadow:
+        0 0 8px rgba(34, 197, 94, 0.2);
+}
+
+
+/* =========================================
+   CODE CONTENT
+========================================= */
+
+.codeContent {
+    padding: 2rem;
+
+    font-family:
+        'Courier New',
+        monospace;
+
+    font-size: 0.85rem;
+
+    line-height: 2;
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    filter:
+        blur(0);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+
+/*
+    Estado utilizado cuando cambia
+    el perfil del código
+*/
+
+.codeChanging {
+    opacity: 0;
+
+    transform:
+        translateY(6px);
+
+    filter:
+        blur(3px);
+}
+
+
+/* =========================================
+   CODE LINES
+========================================= */
+
+.codeLine {
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+
+.codePurple {
+    color: #c084fc;
+
+    text-shadow:
+        0 0 8px rgba(192, 132, 252, 0.15);
+}
+
+
+.codePink {
+    color: #f0abfc;
+
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+
+.codeProperty {
+    color: #a1a1aa;
+}
+
+
+/* =========================================
+   CODE CURSOR
+========================================= */
+
+.codeCursor {
+    display: inline-block;
+
+    color: #d946ef;
+
+    text-shadow:
+        0 0 10px rgba(217, 70, 239, 0.7);
+
+    animation:
+        cursorBlink 0.8s infinite;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .heroContainer {
+        grid-template-columns: 1fr;
+
+        gap: 4rem;
+
+        padding:
+            5rem 2rem;
+    }
+
+
+    .heroContent {
+        text-align: center;
+    }
+
+
+    .heroEyebrow {
+        display: block;
+    }
+
+
+    .heroRole {
+        justify-content: center;
+    }
+
+
+    .heroDescription {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .heroActions {
+        justify-content: center;
+    }
+
+
+    .heroTech {
+        justify-content: center;
+    }
+
+
+    .heroVisual {
+        min-height: 400px;
+    }
+}
+
+
+/* =========================================
+   TABLET PEQUEÑO
+========================================= */
+
+@media (max-width: 800px) {
+
+    .heroContainer {
+        padding:
+            4.5rem 1.5rem;
+    }
+
+
+    .heroTitle {
+        font-size:
+            clamp(3rem, 10vw, 4.5rem);
+    }
+
+
+    .heroDescription {
+        max-width: 620px;
+    }
+
+
+    .heroVisual {
+        min-height: 380px;
+    }
+
+
+    .codeCard {
+        max-width: 560px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: auto;
+    }
+
+
+    .heroContainer {
+        padding:
+            4rem 1rem;
+
+        gap: 3rem;
+    }
+
+
+    .heroEyebrow {
+        font-size: 0.65rem;
+
+        line-height: 1.6;
+    }
+
+
+    .heroTitle {
+        font-size:
+            clamp(2.8rem, 15vw, 4rem);
+
+        line-height: 1;
+    }
+
+
+    .heroRole {
+        flex-direction: column;
+
+        gap: 0.2rem;
+
+        font-size: 1.5rem;
+    }
+
+
+    .heroRoleAnimated {
+        justify-content: center;
+
+        min-width: 0;
+
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+
+    .heroDescription {
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* ================================
+       BOTONES
+    ================================= */
+
+    .heroActions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0.8rem;
+    }
+
+
+    .heroButton {
+        width: 100%;
+
+        min-height: 50px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ================================
+       TECNOLOGÍAS
+    ================================= */
+
+    .heroTech {
+        justify-content: center;
+
+        gap: 0.5rem;
+    }
+
+
+    .heroTech span {
+        font-size: 0.65rem;
+    }
+
+
+    /* ================================
+       VISUAL
+    ================================= */
+
+    .heroVisual {
+        min-height: 320px;
+
+        width: 100%;
+    }
+
+
+    .heroGlow {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    /* ================================
+       CODE CARD
+    ================================= */
+
+    .codeCard {
+        width: 100%;
+
+        max-width: 100%;
+
+        border-radius: 12px;
+    }
+
+
+    .codeContent {
+        padding:
+            1.25rem;
+
+        font-size: 0.68rem;
+
+        line-height: 1.9;
+
+        overflow-x: auto;
+    }
+
+
+    .codeLine {
+        white-space: nowrap;
+    }
+}
+
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
+
+@media (max-width: 400px) {
+
+    .heroContainer {
+        padding:
+            3.5rem 0.8rem;
+    }
+
+
+    .heroTitle {
+        font-size:
+            clamp(2.5rem, 16vw, 3.5rem);
+    }
+
+
+    .heroRole {
+        font-size: 1.3rem;
+    }
+
+
+    .heroDescription {
+        font-size: 0.85rem;
+    }
+
+
+    .codeContent {
+        padding:
+            1rem;
+
+        font-size: 0.6rem;
+    }
+
+
+    .heroTech span {
+        padding:
+            0.4rem 0.6rem;
+    }
+}
+
+
+/* =========================================
+   REDUCIR ANIMACIONES
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .heroContent,
+    .heroVisual,
+    .heroOrb,
+    .heroOrbSecondary,
+    .heroGlow,
+    .codeCard {
+        animation: none;
+    }
+
+
+    .heroButton,
+    .heroTech span,
+    .heroButtonArrow,
+    .codeContent,
+    .codeCard,
+    .codeHeader span {
+        transition: none;
+    }
+
+
+    .heroCursor,
+    .codeCursor {
+        animation: none;
+    }
+}

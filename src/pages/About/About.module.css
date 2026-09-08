@@ -1,0 +1,359 @@
+.about {
+    width: 100%;
+
+    padding: 7rem 0;
+
+    background: #09090b;
+
+    color: white;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.aboutContainer {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 0 4rem;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.aboutHeader {
+    max-width: 800px;
+
+    margin-bottom: 4rem;
+}
+
+
+.aboutEyebrow {
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    color: #c084fc;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.aboutTitle {
+    margin: 0;
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.03em;
+
+    font-weight: 800;
+}
+
+
+.aboutTitle span {
+    color: #c026d3;
+
+    text-shadow:
+        0 0 20px rgba(192, 38, 211, 0.3),
+        0 0 40px rgba(192, 38, 211, 0.1);
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.aboutContent {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(350px, 0.8fr);
+
+    align-items: start;
+
+    gap: 6rem;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.aboutText {
+    max-width: 750px;
+}
+
+
+.aboutText p {
+    margin: 0 0 1.5rem;
+
+    color: #a1a1aa;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+}
+
+
+.aboutText p:last-child {
+    margin-bottom: 0;
+}
+
+
+.aboutText strong {
+    color: #e4e4e7;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ESTADÍSTICAS
+========================================= */
+
+.aboutStats {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.aboutCard {
+    position: relative;
+
+    min-height: 120px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 1.5rem 2rem;
+
+    border: 1px solid #27272a;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(168, 85, 247, 0.08),
+            rgba(24, 24, 27, 0.8)
+        );
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.aboutCard::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: #a855f7;
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+
+.aboutCard:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(168, 85, 247, 0.5);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(168, 85, 247, 0.08);
+}
+
+
+/* =========================================
+   NÚMERO
+========================================= */
+
+.aboutNumber {
+    margin-bottom: 0.3rem;
+
+    color: #c084fc;
+
+    font-size: 2rem;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.aboutLabel {
+    color: #71717a;
+
+    font-size: 0.85rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .aboutContainer {
+        padding: 0 3rem;
+    }
+
+    .aboutContent {
+        gap: 3rem;
+    }
+
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+========================================= */
+
+@media (max-width: 850px) {
+
+    .about {
+        padding: 5rem 0;
+    }
+
+    .aboutContainer {
+        padding: 0 2rem;
+    }
+
+    .aboutHeader {
+        max-width: 750px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+    }
+
+    .aboutContent {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+    }
+
+    .aboutText {
+        max-width: 750px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .aboutStats {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .about {
+        padding: 4rem 0;
+    }
+
+    .aboutContainer {
+        padding: 0 1.25rem;
+    }
+
+    .aboutEyebrow {
+        font-size: 0.7rem;
+    }
+
+    .aboutTitle {
+        font-size: clamp(2.3rem, 11vw, 3.5rem);
+    }
+
+    .aboutText p {
+        font-size: 0.95rem;
+
+        line-height: 1.75;
+    }
+
+    .aboutStats {
+        grid-template-columns: 1fr;
+    }
+
+    .aboutCard {
+        min-height: 100px;
+
+        padding: 1.25rem 1.5rem;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
+
+@media (max-width: 400px) {
+
+    .aboutContainer {
+        padding: 0 1rem;
+    }
+
+    .aboutTitle {
+        font-size: 2.2rem;
+    }
+
+}

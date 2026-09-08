@@ -1,0 +1,66 @@
+.home {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #08080d;
+    color: #ffffff;
+
+    overflow-x: hidden;
+}
+
+.homeSection {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 5rem 2rem;
+
+    box-sizing: border-box;
+}
+
+/* Primera sección: Hero */
+.homeSection:first-child {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+/* Separación visual entre secciones */
+.homeSection + .homeSection {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Pantallas medianas */
+@media (max-width: 1024px) {
+    .homeSection {
+        padding: 4rem 1.5rem;
+    }
+
+    .homeSection:first-child {
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+    }
+}
+
+/* Tablets y móviles */
+@media (max-width: 768px) {
+    .homeSection {
+        padding: 3.5rem 1rem;
+    }
+
+    .homeSection:first-child {
+        padding-top: 1.5rem;
+        padding-bottom: 4rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .homeSection {
+        padding: 3rem 0.75rem;
+    }
+
+    .homeSection:first-child {
+        padding-top: 1rem;
+        padding-bottom: 3.5rem;
+    }
+}
