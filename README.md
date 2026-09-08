@@ -1,75 +1,123 @@
-# React + TypeScript + Vite
+# ✨ Alex Silva
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Full Stack Software Developer | AI Enthusiast | Computer Vision & Machine Learning
 
-Currently, two official plugins are available:
+Bienvenida a mi portfolio profesional.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este sitio reúne algunos de los proyectos, tecnologías y experiencias que han formado parte de mi trayectoria como desarrolladora de software, con especial interés en aplicaciones web modernas, inteligencia artificial y soluciones tecnológicas orientadas a resolver problemas reales.
 
-## React Compiler
+🌐 **Portfolio Online**
+**https://portafolioalexs.netlify.app**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 👩‍💻 Sobre mí
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Soy desarrolladora Full Stack e Ingeniera Civil Informática, apasionada por la creación de soluciones escalables, intuitivas y centradas en las personas.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Me especializo en el desarrollo de aplicaciones web, arquitecturas modernas y proyectos que integran Inteligencia Artificial, Machine Learning y Computer Vision.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Cada proyecto representa una oportunidad para aprender, innovar y construir software de calidad.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+## 🚀 Tecnologías
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### Frontend
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* React
+* Angular
+* TypeScript
+* JavaScript
+* HTML5
+* CSS3
+* Responsive Design
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Backend
 
-```
+* ASP.NET Core (.NET 8)
+* FastAPI
+* Node.js
+* REST APIs
+* JWT Authentication
+
+### Bases de Datos
+
+* PostgreSQL
+* SQL Server
+* MySQL
+
+### Inteligencia Artificial
+
+* TensorFlow
+* PyTorch
+* Machine Learning
+* Deep Learning
+* Computer Vision
+* Data Science
+
+### Herramientas
+
+* Git & GitHub
+* Docker
+* Azure
+* Postman
+* Scrum
+* Agile
+
+---
+
+## 🌟 Proyectos Destacados
+
+### 🩺 Identity Dream AI
+
+Plataforma basada en Inteligencia Artificial para evaluación médica mediante segmentación semántica y análisis de imágenes clínicas.
+
+**Stack:** Angular · ASP.NET Core · PostgreSQL · PyTorch
+
+---
+
+### 💉 GlucoAI
+
+Sistema predictivo para clasificación de riesgo de diabetes utilizando técnicas de Machine Learning y análisis de datos clínicos.
+
+**Stack:** Angular · FastAPI · Python · Scikit-Learn
+
+---
+
+### 🤖 CapilAI
+
+Simulación asistida por IA para procedimientos capilares mediante modelos generativos y procesamiento de imágenes.
+
+**Stack:** React · Python · AI Models · Computer Vision
+
+---
+
+## 📈 Objetivos Profesionales
+
+Actualmente continúo fortaleciendo mis conocimientos en:
+
+* Inteligencia Artificial aplicada a salud
+* Arquitecturas escalables
+* Cloud Computing
+* Computer Vision
+* MLOps
+* Desarrollo Full Stack
+
+---
+
+## 📬 Contacto
+
+📧 Correo: j*********@gmail.com
+
+🌐 Portfolio: https://portafolioalexs.netlify.app
+
+💻 GitHub: https://github.com/AlexanderSilvaV
+
+---
+
+### 💜 Gracias por visitar mi portfolio
+
+Siempre estoy abierta a colaborar en nuevos proyectos, compartir conocimientos y seguir creciendo profesionalmente.
+
+*"Transformando ideas en soluciones tecnológicas que generan impacto."*
